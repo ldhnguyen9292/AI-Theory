@@ -1,0 +1,18 @@
+# Dependency directories
+node_modules/
+
+# Local environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Firebase logs & configurations
+.firebase/
+firebase-debug.log
+ui-debug.log
+
+# OS metadata
+.DS_Store
+Thumbs.db

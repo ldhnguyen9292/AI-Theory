@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Dai Hoang Nguyen | Full-Stack Web Developer & Former MD</title>
+    <meta name="description" content="Portfolio of Le Dai Hoang Nguyen - A full-stack web developer with 3 years of experience in Node.js and React. Former Medical Doctor with unique clinical-technical perspective.">
+    
+    <!-- Unique Interactive Element IDs for browser testing -->
+    <meta name="author" content="Le Dai Hoang Nguyen">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom Style Sheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+    
+    <!-- Navigation Bar -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo" id="nav-logo-link">
+                <span class="logo-icon"><i class="fa-solid fa-user-doctor"></i></span>
+                <span class="logo-text">Nguyen<span class="highlight">.Dev</span></span>
+            </a>
+            
+            <ul class="nav-links" id="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark/light theme" id="theme-toggle-btn">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <button class="mobile-menu-toggle" id="mobile-menu-toggle-btn" aria-label="Toggle menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-bg-glow"></div>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="hero-badge fade-in-up">
+                    <span class="badge-icon"><i class="fa-solid fa-stethoscope"></i></span>
+                    <span class="badge-text">Medical Doctor turned Full-Stack Developer</span>
+                </div>
+                <h1 class="hero-title fade-in-up">
+                    Hi, I'm <span class="highlight">Le Dai Hoang Nguyen</span>
+                </h1>
+                <h2 class="hero-subtitle fade-in-up">
+                    I am a <span id="typing-text" class="typing-text"></span><span class="typed-cursor">|</span>
+                </h2>
+                <p class="hero-description fade-in-up">
+                    A full-stack engineer with 3+ years of professional tech experience building scalable backend APIs (Node.js) and intuitive frontend interfaces (React/Vue). Drawing from my medical practitioner background, I bring an exceptional, highly analytical approach to health-related, data-driven, and complex engineering challenges.
+                </p>
+                <div class="hero-ctas fade-in-up">
+                    <a href="#experience" class="btn btn-primary" id="hero-view-experience-btn">
+                        <span>View My Journey</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary" id="hero-contact-btn">
+                        <span>Contact Me</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="hero-stats fade-in-up">
+                <div class="stat-card">
+                    <h3 class="stat-number">3+</h3>
+                    <p class="stat-label">Years of Dev Experience</p>
+                </div>
+                <div class="stat-card">
+                    <h3 class="stat-number">9+</h3>
+                    <p class="stat-label">Projects Deployed</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-doctor-stamp">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <p class="stat-label">Former MD Practitioner</p>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <a href="#about" aria-label="Scroll to About section">
+                <span class="mouse-icon">
+                    <span class="wheel"></span>
+                </span>
+            </a>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="about-section section-padding scroll-reveal">
+        <div class="container">
+            <div class="section-header">
+                <span class="sub-title">My Background</span>
+                <h2 class="section-title">Bridging Medicine & Tech</h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="about-grid">
+                <div class="about-info">
+                    <h3 class="about-h3">A Unique Technical Perspective</h3>
+                    <p class="about-p">
+                        Before shifting full-time into software engineering, I dedicated 6 years to studying medicine, graduating as a <strong>General Practitioner (Medical Doctor)</strong>, and spent nearly 4 years working as a <strong>Health Quarantine Officer</strong> at the Ho Chi Minh City Center for Disease Control (CDC).
+                    </p>
+                    <p class="about-p">
+                        During the height of the COVID-19 pandemic, I realized the enormous impact of software when I successfully built and automated passenger epidemiological tracking systems using Excel, VBA, and Selenium. This first-hand experience of solving critical real-world crises through code inspired my transition into full-stack web development.
+                    </p>
+                    <p class="about-p">
+                        Today, I combine my strict clinical training—which taught me critical problem-solving, absolute attention to detail, and calm decision-making under high pressure—with modern backend and frontend software engineering practices to write reliable, highly-scalable software.
+                    </p>
+                    
+                    <div class="about-keypoints">
+                        <div class="keypoint">
+                            <span class="keypoint-icon"><i class="fa-solid fa-brain"></i></span>
+                            <div class="keypoint-text">
+                                <h4>Data & Logic Driven</h4>
+                                <p>Rigorous analytical mindset applied to complex data structures and microservices architectures.</p>
+                            </div>
+                        </div>
+                        <div class="keypoint">
+                            <span class="keypoint-icon"><i class="fa-solid fa-circle-check"></i></span>
+                            <div class="keypoint-text">
+                                <h4>Exceptional Care & Security</h4>
+                                <p>Unwavering focus on API performance, data integrity, and security vulnerabilities (XSS, CSP, CSRF prevention).</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-highlight-card">
+                    <div class="card-glow"></div>
+                    <div class="highlight-header">
+                        <i class="fa-solid fa-notes-medical icon-large"></i>
+                        <h3>The MD-to-Dev Synergy</h3>
+                    </div>
+                    <div class="highlight-body">
+                        <p class="quote">
+                            "Medicine and programming are fundamentally alike. Both require diagnosing complex, abstract systems, tracking down root causes, and applying precise, logical interventions to ensure optimal health and efficiency."
+                        </p>
+                        <div class="highlight-pill-container">
+                            <span class="highlight-pill">Bioinformatics Focus</span>
+                            <span class="highlight-pill">AI Integration</span>
+                            <span class="highlight-pill">API Architecture</span>
+                            <span class="highlight-pill">Empathetic Design</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section (Timeline Layout) -->
+    <section id="experience" class="experience-section section-padding scroll-reveal">
+        <div class="container">
+            <div class="section-header">
+                <span class="sub-title">Career Milestones</span>
+                <h2 class="section-title">My Professional Timeline</h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="timeline-container">
+                <div class="timeline-line"></div>
+                
+                <!-- Freelancer -->
+                <div class="timeline-item left">
+                    <div class="timeline-marker">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Jul 2024 – Present</span>
+                        <h3 class="timeline-role">Freelancer Full-Stack Developer</h3>
+                        <h4 class="timeline-company">Self-Employed | Ho Chi Minh City, Vietnam</h4>
+                        <p class="timeline-desc">
+                            Partnering with diverse clients, including key U.S. startups, to deliver optimized frontend portals, streamline engineering configurations, and handle SEO optimization.
+                        </p>
+                        <div class="timeline-projects">
+                            <div class="sub-project">
+                                <strong>Project: Teamfight.lol</strong> <span class="role-badge">Frontend Developer</span>
+                                <p>Collaborated with U.S. clients to maintain and design a responsive Web Analytics platform for Teamfight Tactics players. Optimized frontend performance and cross-device responsiveness.</p>
+                                <span class="tech-tag">Vue.js</span>
+                            </div>
+                            <div class="sub-project">
+                                <strong>Project: Satorie</strong> <span class="role-badge">Frontend Developer</span>
+                                <p>Initialized project structure and Integrated critical email notification sub-systems for a U.S. CFO Strategy and Consulting platform targeted at SMBs. Conducted SEO auditing and production deployments.</p>
+                                <span class="tech-tag">React.js</span> <span class="tech-tag">Next.js</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- HDWEBSOFT -->
+                <div class="timeline-item right">
+                    <div class="timeline-marker">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Oct 2021 – Jun 2024</span>
+                        <h3 class="timeline-role">Backend Developer</h3>
+                        <h4 class="timeline-company">HDWEBSOFT | Ho Chi Minh City, Vietnam</h4>
+                        <p class="timeline-desc">
+                            Designed and built scalable, secure backend systems, created robust REST and GraphQL API structures, integrated complex third-party SaaS services, and resolved performance bottlenecks for diverse web applications.
+                        </p>
+                        <div class="timeline-projects-list">
+                            <div class="sub-project-summary">
+                                <strong>Core Projects Engaged:</strong>
+                                <ul>
+                                    <li><strong>Airmason</strong>: Built high-performance APIs for an employee handbook platform, integrating key enterprise identity solutions (Okta, OneLogin, BambooHR) and implementing database schema modifications in MySQL.</li>
+                                    <li><strong>Boho</strong>: Developed transactional APIs for a charitable contribution platform connecting securely to VEND Point of Sale with MongoDB.</li>
+                                    <li><strong>Cadence Bike</strong>: Engineered AWS Lambda serverless endpoints and wrote comprehensive Jest test suites for a bike subscription engine.</li>
+                                    <li><strong>CrowdClip</strong>: Designed backend endpoints handling facial detection and video analysis workloads on AWS.</li>
+                                    <li><strong>Framely</strong>: Architected custom Node/PostgreSQL structures and a developer SDK for a digital NFT marketplace.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="timeline-skills">
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Express.js</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">TypeORM</span>
+                            <span class="tech-tag">GraphQL</span>
+                            <span class="tech-tag">AWS Lambda</span>
+                            <span class="tech-tag">Redis</span>
+                            <span class="tech-tag">Jest</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- HCMC CDC -->
+                <div class="timeline-item left">
+                    <div class="timeline-marker">
+                        <i class="fa-solid fa-house-medical-flag"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Dec 2017 – Jun 2021</span>
+                        <h3 class="timeline-role">Health Quarantine Officer</h3>
+                        <h4 class="timeline-company">HCMC Center for Disease Control (CDC) | Tan Son Nhat Airport</h4>
+                        <p class="timeline-desc">
+                            Managed and coordinated infection control screenings for incoming international travelers, analyzed global epidemiological data, and deployed critical IT automation scripts to streamline pandemic entries.
+                        </p>
+                        <div class="timeline-accomplishments">
+                            <div class="sub-project">
+                                <strong><i class="fa-solid fa-wand-magic-sparkles"></i> Epidemiological Quarantine Automation</strong>
+                                <p>Conceived and implemented a health declaration compilation pipeline using Excel, VBA, and Selenium automation. Reduced human errors and processed data from incoming flights rapidly, cutting terminal congestion.</p>
+                            </div>
+                            <div class="sub-project">
+                                <strong><i class="fa-solid fa-rectangle-list"></i> Passenger Isolation Router</strong>
+                                <p>Created a classification program logic to categorize passengers instantly into separate quarantine routing queues based on international origin risk levels.</p>
+                            </div>
+                            <div class="award-box">
+                                <span class="award-badge"><i class="fa-solid fa-award"></i> Certificate of Merit (2020)</span>
+                                <p>Awarded by the Ho Chi Minh City Department of Health for outstanding, high-pressure contributions to COVID-19 prevention, entry screening, and containment.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-skills">
+                            <span class="tech-tag">VBA</span>
+                            <span class="tech-tag">Selenium</span>
+                            <span class="tech-tag">Excel Scripting</span>
+                            <span class="tech-tag">Visual Basic</span>
+                            <span class="tech-tag">Epidemiology</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section section-padding scroll-reveal">
+        <div class="container">
+            <div class="section-header">
+                <span class="sub-title">My Creations</span>
+                <h2 class="section-title">Selected Projects</h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <!-- Filters -->
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all" id="filter-all-btn">All Projects</button>
+                <button class="filter-btn" data-filter="frontend" id="filter-frontend-btn">Frontend</button>
+                <button class="filter-btn" data-filter="backend" id="filter-backend-btn">Backend / APIs</button>
+                <button class="filter-btn" data-filter="medical" id="filter-medical-btn">Healthcare & Automation</button>
+            </div>
+            
+            <!-- Projects Grid -->
+            <div class="projects-grid" id="projects-container">
+                <!-- Teamfight.lol -->
+                <div class="project-card" data-category="frontend">
+                    <div class="project-img-placeholder">
+                        <i class="fa-solid fa-gamepad card-icon"></i>
+                        <span class="proj-category">Frontend</span>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Teamfight.lol</h3>
+                        <p class="project-description">A responsive game analytics platform built for Teamfight Tactics players. Streamlines UI performance and details dashboard layouts for high traffic usage.</p>
+                        <div class="project-tech">
+                            <span class="tech-pill">Vue.js</span>
+                            <span class="tech-pill">Responsive Design</span>
+                            <span class="tech-pill">SEO</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Satorie -->
+                <div class="project-card" data-category="frontend">
+                    <div class="project-img-placeholder">
+                        <i class="fa-solid fa-chart-line card-icon"></i>
+                        <span class="proj-category">Frontend</span>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Satorie</h3>
+                        <p class="project-description">CFO strategy and business consulting portal designed for SMBs. Handles advanced onboarding workflows and integrates robust notification systems.</p>
+                        <div class="project-tech">
+                            <span class="tech-pill">React.js</span>
+                            <span class="tech-pill">Next.js</span>
+                            <span class="tech-pill">Email APIs</span>
+                            <span class="tech-pill">SEO Opt</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Airmason -->
+                <div class="project-card" data-category="backend">
+                    <div class="project-img-placeholder">
+                        <i class="fa-solid fa-book-open-reader card-icon"></i>
+                        <span class="proj-category">Backend</span>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Airmason</h3>
+                        <p class="project-description">API engine for an enterprise employee handbook. Integrates SSO via HRIS (Okta, OneLogin, BambooHR) and implements advanced data integrity and CSV/PDF reports.</p>
+                        <div class="project-tech">
+                            <span class="tech-pill">Node.js</span>
+                            <span class="tech-pill">MySQL</span>
+                            <span class="tech-pill">TypeORM</span>
+                            <span class="tech-pill">OAuth 2.0</span>
+                            <span class="tech-pill">GraphQL</span>
+                            <span class="tech-pill">Redis</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Boho -->
+                <div class="project-card" data-category="backend">
+                    <div class="project-img-placeholder">
+                        <i class="fa-solid fa-hand-holding-heart card-icon"></i>
+                        <span class="proj-category">Backend</span>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Boho</h3>
+                        <p class="project-description">Charitable transactions and donations API suite. Connects with physical VEND Point of Sale terminals to securely authorize retail charity contributions.</p>
+                        <div class="project-tech">
+                            <span class="tech-pill">Node.js</span>
+                            <span class="tech-pill">Express</span>
+                            <span class="tech-pill">MongoDB</span>
+                            <span class="tech-pill">VEND API</span>
+                            <span class="tech-pill">JWT</span>
+                            <span class="tech-pill">Redis</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cadence Bike -->
+                <div class="project-card" data-category="backend">
+                    <div class="project-img-placeholder">
+                        <i class="fa-solid fa-bicycle card-icon"></i>
+                        <span class="proj-category">Backend</span>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Cadence Bike</h3>
+                        <p class="project-description">Serverless application endpoints supporting subscription portals. Leverages AWS Lambda handlers, MongoDB storage, and features a thorough Jest unit test suite.</p>
+                        <div class="project-tech">
+                            <span class="tech-pill">AWS Lambda</span>
+                            <span class="tech-pill">Node.js</span>
+                            <span class="tech-pill">MongoDB</span>
+                            <span class="tech-pill">Jest Testing</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CrowdClip -->
+                <div class="project-card" data-category="backend">
+                    <div class="project-img-placeholder">
+                        <i class="fa-solid fa-face-smile card-icon"></i>
+                        <span class="proj-category">Backend</span>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">CrowdClip</h3>
+                        <p class="project-description">Scalable REST microservice endpoints supporting an AI-driven video analysis and face detection SaaS. Deployed on cloud platform services.</p>
+                        <div class="project-tech">
+                            <span class="tech-pill">Node.js</span>
+                            <span class="tech-pill">MongoDB</span>
+                            <span class="tech-pill">REST APIs</span>
+                            <span class="tech-pill">AWS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PAG -->
+                <div class="project-card" data-category="backend">
+                    <div class="project-img-placeholder">
+                        <i class="fa-solid fa-sitemap card-icon"></i>
+                        <span class="proj-category">Backend</span>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">PAG Staff Platform</h3>
+                        <p class="project-description">A private corporate office staff planner. Implemented optimized relational database queries using Path Enumeration trees to manage complex hierarchies.</p>
+                        <div class="project-tech">
+                            <span class="tech-pill">TypeORM</span>
+                            <span class="tech-pill">MySQL</span>
+                            <span class="tech-pill">Hierarchical DB</span>
+                            <span class="tech-pill">GraphQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Framely -->
+                <div class="project-card" data-category="backend">
+                    <div class="project-img-placeholder">
+                        <i class="fa-solid fa-image card-icon"></i>
+                        <span class="proj-category">Backend</span>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Framely NFT SDK</h3>
+                        <p class="project-description">Created backend services and a developer SDK to streamline API bindings for external clients. Managed transaction sync in PostgreSQL.</p>
+                        <div class="project-tech">
+                            <span class="tech-pill">PostgreSQL</span>
+                            <span class="tech-pill">SDK Development</span>
+                            <span class="tech-pill">Microservices</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- My Fitness Studio -->
+                <div class="project-card" data-category="backend">
+                    <div class="project-img-placeholder">
+                        <i class="fa-solid fa-dumbbell card-icon"></i>
+                        <span class="proj-category">Backend</span>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">My Fitness Studio</h3>
+                        <p class="project-description">Performance-tuned endpoints and search capabilities for an active fitness client base using specialized NoSQL storage layers.</p>
+                        <div class="project-tech">
+                            <span class="tech-pill">Node.js</span>
+                            <span class="tech-pill">DynamoDB</span>
+                            <span class="tech-pill">Elasticsearch</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Health Quarantine Declaration System -->
+                <div class="project-card" data-category="medical">
+                    <div class="project-img-placeholder-medical">
+                        <i class="fa-solid fa-shield-virus card-icon"></i>
+                        <span class="proj-category">Healthcare</span>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Quarantine Screening Automation</h3>
+                        <p class="project-description">Custom internal utility that compiled maritime and aviation health entries, parsing passengers automatically to mitigate pandemic line bottlenecks.</p>
+                        <div class="project-tech">
+                            <span class="tech-pill">Selenium WebDriver</span>
+                            <span class="tech-pill">VBA</span>
+                            <span class="tech-pill">Excel Scripts</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section section-padding scroll-reveal">
+        <div class="container">
+            <div class="section-header">
+                <span class="sub-title">Expertise</span>
+                <h2 class="section-title">Skills & Capabilities</h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="skills-grid">
+                <!-- Langs & Core -->
+                <div class="skills-category-card">
+                    <h3><i class="fa-solid fa-code"></i> Core Languages</h3>
+                    <div class="skills-list">
+                        <span class="skill-item">JavaScript (ES6+)</span>
+                        <span class="skill-item">TypeScript</span>
+                        <span class="skill-item">VBA / Basic</span>
+                        <span class="skill-item">Vietnamese (Native)</span>
+                        <span class="skill-item">English (Professional)</span>
+                    </div>
+                </div>
+
+                <!-- Frontend -->
+                <div class="skills-category-card">
+                    <h3><i class="fa-solid fa-desktop"></i> Web Development</h3>
+                    <div class="skills-list">
+                        <span class="skill-item">HTML5 / CSS3</span>
+                        <span class="skill-item">Node.js</span>
+                        <span class="skill-item">Express.js</span>
+                        <span class="skill-item">React.js</span>
+                        <span class="skill-item">Next.js</span>
+                        <span class="skill-item">Vue.js</span>
+                    </div>
+                </div>
+
+                <!-- Databases -->
+                <div class="skills-category-card">
+                    <h3><i class="fa-solid fa-database"></i> Databases & ORMs</h3>
+                    <div class="skills-list">
+                        <span class="skill-item">MySQL</span>
+                        <span class="skill-item">PostgreSQL</span>
+                        <span class="skill-item">MongoDB</span>
+                        <span class="skill-item">DynamoDB</span>
+                        <span class="skill-item">Redis (Caching)</span>
+                        <span class="skill-item">TypeORM</span>
+                        <span class="skill-item">Mongoose</span>
+                        <span class="skill-item">Elasticsearch</span>
+                    </div>
+                </div>
+
+                <!-- Clouds -->
+                <div class="skills-category-card">
+                    <h3><i class="fa-solid fa-cloud"></i> Cloud Platforms</h3>
+                    <div class="skills-list">
+                        <span class="skill-item">AWS Lambda (Serverless)</span>
+                        <span class="skill-item">AWS S3 & EC2</span>
+                        <span class="skill-item">Google Cloud Platform</span>
+                        <span class="skill-item">Microsoft Azure</span>
+                    </div>
+                </div>
+
+                <!-- Tools & Methods -->
+                <div class="skills-category-card">
+                    <h3><i class="fa-solid fa-screwdriver-wrench"></i> Tools & Practices</h3>
+                    <div class="skills-list">
+                        <span class="skill-item">Git / GitHub / GitLab</span>
+                        <span class="skill-item">Docker</span>
+                        <span class="skill-item">Postman</span>
+                        <span class="skill-item">Microservices</span>
+                        <span class="skill-item">Agile / Scrum</span>
+                        <span class="skill-item">Jest Testing</span>
+                        <span class="skill-item">CI/CD Awareness</span>
+                    </div>
+                </div>
+
+                <!-- Soft Skills -->
+                <div class="skills-category-card">
+                    <h3><i class="fa-solid fa-heart-pulse"></i> Professional Strengths</h3>
+                    <div class="skills-list">
+                        <span class="skill-item">Critical Problem-solving</span>
+                        <span class="skill-item">Time Management</span>
+                        <span class="skill-item">Attention to Detail</span>
+                        <span class="skill-item">Adaptability & Self-learning</span>
+                        <span class="skill-item">Teamwork & Collaboration</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education-section section-padding scroll-reveal">
+        <div class="container">
+            <div class="section-header">
+                <span class="sub-title">Credentials</span>
+                <h2 class="section-title">Education & Certifications</h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="education-grid">
+                <!-- Cybersoft -->
+                <div class="education-card">
+                    <div class="edu-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                    <div class="edu-details">
+                        <span class="edu-date">Jan 2021 - Dec 2021</span>
+                        <h3>Full-Stack Web Developer Program</h3>
+                        <h4>Cybersoft - Cyberlearn Programming Center</h4>
+                        <p class="edu-desc">Completed a comprehensive curriculum centered on frontend layouts, React structures, Node.js API development, database architecture, and Git collaboration workflows.</p>
+                    </div>
+                </div>
+
+                <!-- Med School -->
+                <div class="education-card">
+                    <div class="edu-icon"><i class="fa-solid fa-user-doctor"></i></div>
+                    <div class="edu-details">
+                        <span class="edu-date">Aug 2011 - Aug 2017</span>
+                        <h3>General Practitioner (Medical Doctor)</h3>
+                        <h4>Pham Ngoc Thach University of Medicine</h4>
+                        <p class="edu-desc">Completed 6 years of intensive training in internal medicine, surgery, diagnostics, epidemiology, and patient healthcare, developing highly structured analytical logic.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section section-padding scroll-reveal">
+        <div class="container">
+            <div class="section-header">
+                <span class="sub-title">Get In Touch</span>
+                <h2 class="section-title">Contact Information</h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="contact-grid">
+                <!-- Info cards -->
+                <div class="contact-info-panel">
+                    <h3>Let's Collaborate!</h3>
+                    <p class="contact-pitch">
+                        I am currently open to full-time roles, contract positions, and consulting opportunities. If you have an exciting project—especially in data-driven architectures, healthtech, or complex backend systems—let's build together.
+                    </p>
+                    
+                    <div class="contact-details-list">
+                        <div class="contact-detail-item">
+                            <span class="icon-box"><i class="fa-solid fa-envelope"></i></span>
+                            <div class="detail-text">
+                                <span>Email</span>
+                                <a href="mailto:ldhnguyen9292@gmail.com" id="contact-email-link">ldhnguyen9292@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-detail-item">
+                            <span class="icon-box"><i class="fa-solid fa-location-dot"></i></span>
+                            <div class="detail-text">
+                                <span>Location</span>
+                                <p>Ho Chi Minh City, Vietnam</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-social-icons">
+                        <a href="https://github.com/ldhnguyen9292" target="_blank" aria-label="GitHub Profile" id="github-link"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/nguyen-le-5450b9239/" target="_blank" aria-label="LinkedIn Profile" id="linkedin-link"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                    
+                    <!-- Dynamic Download Button -->
+                    <a href="RESUME – LE DAI HOANG NGUYEN.pdf" download="RESUME – LE DAI HOANG NGUYEN.pdf" class="btn btn-primary btn-cv" id="cv-download-btn">
+                        <i class="fa-solid fa-file-arrow-down"></i>
+                        <span>Download Complete CV (PDF)</span>
+                    </a>
+                </div>
+                
+                <!-- Quick message form -->
+                <div class="contact-form-card">
+                    <h3>Send a Quick Message</h3>
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="form-name">Your Name</label>
+                            <input type="text" id="form-name" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="form-email">Your Email</label>
+                            <input type="email" id="form-email" placeholder="john@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="form-message">Message</label>
+                            <textarea id="form-message" rows="5" placeholder="Hi Nguyen, let's connect..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" id="form-submit-btn">Send Message</button>
+                    </form>
+                    <div id="form-response-msg" class="form-response-msg"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <p>&copy; 2026 Le Dai Hoang Nguyen. All rights reserved.</p>
+            <p class="footer-note">Handcrafted using HTML, CSS, & Vanilla JS</p>
+        </div>
+    </footer>
+
+    <!-- Chatbot Widget -->
+    <div class="chatbot-widget" id="cv-chatbot">
+        <!-- Floating trigger -->
+        <button class="chatbot-trigger" id="chatbot-trigger-btn" aria-label="Open CV Chatbot">
+            <span class="trigger-icon"><i class="fa-solid fa-comments"></i></span>
+            <span class="trigger-badge"><i class="fa-solid fa-stethoscope"></i></span>
+        </button>
+        
+        <!-- Chat window -->
+        <div class="chatbot-window" id="chatbot-window-container">
+            <!-- Header -->
+            <div class="chatbot-header">
+                <div class="chatbot-header-info">
+                    <div class="bot-avatar"><i class="fa-solid fa-user-doctor"></i></div>
+                    <div>
+                        <h4>Nguyen's Assistant</h4>
+                        <span class="bot-status"><span class="status-dot"></span>Online (Strictly Factual)</span>
+                    </div>
+                </div>
+                <button class="chatbot-close" id="chatbot-close-btn" aria-label="Close Chatbot">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            
+            <!-- Message History -->
+            <div class="chatbot-body" id="chatbot-messages">
+                <div class="message bot-message">
+                    Hi there! I am Le Dai Hoang Nguyen's virtual assistant. I am equipped strictly with information from his verified CV. 
+                    <br><br>
+                    Feel free to ask me anything about his <strong>unique medical doctor background</strong>, <strong>work experience</strong>, <strong>9+ projects</strong>, <strong>education</strong>, or <strong>skills</strong>!
+                </div>
+            </div>
+            
+            <!-- Quick Suggestion Chips -->
+            <div class="chatbot-suggestions" id="chatbot-chips">
+                <button class="chip" data-query="medical background">🩺 Tell me about your medical transition</button>
+                <button class="chip" data-query="projects">🚀 What projects have you built?</button>
+                <button class="chip" data-query="backend skills">💻 What are your tech skills?</button>
+                <button class="chip" data-query="work experience">⏳ Show your work history</button>
+                <button class="chip" data-query="education">🎓 Where did you study?</button>
+                <button class="chip" data-query="contact">📞 Get contact information</button>
+                <button class="chip" data-query="covid merit">🏆 HCMC Health Department Award</button>
+            </div>
+            
+            <!-- Footer Form -->
+            <form class="chatbot-footer" id="chatbot-form">
+                <input type="text" id="chatbot-input" placeholder="Ask about Le's CV (e.g., 'What skills...')" required autocomplete="off">
+                <button type="submit" id="chatbot-send-btn" aria-label="Send message">
+                    <i class="fa-solid fa-paper-plane"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+</body>
+</html>
