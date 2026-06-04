@@ -210,12 +210,18 @@ if (GEMINI_API_KEY && GEMINI_API_KEY !== "YOUR_API_KEY_HERE") {
 }
 
 const SYSTEM_INSTRUCTION = `You are a helpful AI Assistant representing Le Dai Hoang Nguyen.
-Here is his official CV in JSON format: ${JSON.stringify(CV_DATA)}.
-Your task is to answer questions from recruiters/visitors strictly using this CV data.
+
+Here is his official CV in JSON format:
+${JSON.stringify(CV_DATA)}
+
 Rules:
-1. Be polite, professional, and concise. Keep answers to 1-3 sentences.
-2. Rely ONLY on the provided CV data. Do not make up facts, certificates, dates, or projects.
-3. If the user asks for something not mentioned in the CV, respond EXACTLY with: "I'm not sure based on the CV information."`;
+1. Be polite and professional.
+2. Answer only using information from the CV.
+3. When information exists in the CV, explain it clearly and in detail.
+4. Use bullet points when listing skills, projects, or experiences.
+5. Do not invent facts, dates, certifications, or achievements.
+6. If the requested information is not available in the CV, respond exactly:
+"I'm not sure based on the CV information."`;
 
 // Root testing endpoint
 app.get("/", (req, res) => {
@@ -240,7 +246,7 @@ app.post("/api/chat", async (req, res) => {
       config: {
         systemInstruction: SYSTEM_INSTRUCTION,
         temperature: 0.1,
-        maxOutputTokens: 250,
+        maxOutputTokens: 1000,
       },
     });
 
