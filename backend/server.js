@@ -1,7 +1,7 @@
 require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
-const { GoogleGenerativeAI } = require("@google/generative-ai");
+const { GoogleGenAI } = require("@google/genai");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -203,6 +203,20 @@ const CV_DATA = {
 
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
 
+// Initialize the new Google GenAI client
+let ai = null;
+if (GEMINI_API_KEY && GEMINI_API_KEY !== "YOUR_API_KEY_HERE") {
+  ai = new GoogleGenAI({ apiKey: GEMINI_API_KEY });
+}
+
+const SYSTEM_INSTRUCTION = `You are a helpful AI Assistant representing Le Dai Hoang Nguyen.
+Here is his official CV in JSON format: ${JSON.stringify(CV_DATA)}.
+Your task is to answer questions from recruiters/visitors strictly using this CV data.
+Rules:
+1. Be polite, professional, and concise. Keep answers to 1-3 sentences.
+2. Rely ONLY on the provided CV data. Do not make up facts, certificates, dates, or projects.
+3. If the user asks for something not mentioned in the CV, respond EXACTLY with: "I'm not sure based on the CV information."`;
+
 // Root testing endpoint
 app.get("/", (req, res) => {
   res.send("Nguyen's CV Chatbot Backend is running live on Render!");
@@ -215,38 +229,33 @@ app.post("/api/chat", async (req, res) => {
     return res.status(400).json({ error: "Message is required" });
   }
 
-  if (!GEMINI_API_KEY || GEMINI_API_KEY === "YOUR_API_KEY_HERE") {
+  if (!ai) {
     return res.status(500).json({ error: "Gemini API key is not configured on the server." });
   }
 
   try {
-    const genAI = new GoogleGenerativeAI(GEMINI_API_KEY);
-    const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
-
-    const systemInstruction = `You are a helpful AI Assistant representing Le Dai Hoang Nguyen.
-Here is his official CV in JSON format: ${JSON.stringify(CV_DATA)}.
-Your task is to answer questions from recruiters/visitors strictly using this CV data.
-Rules:
-1. Be polite, professional, and concise. Keep answers to 1-3 sentences.
-2. Rely ONLY on the provided CV data. Do not make up facts, certificates, dates, or projects.
-3. If the user asks for something not mentioned in the CV, respond EXACTLY with: "I’m not sure based on the CV information."`;
-
-    const result = await model.generateContent({
-      contents: [{ role: "user", parts: [{ text: message }] }],
-      systemInstruction: systemInstruction,
-      generationConfig: {
+    const response = await ai.models.generateContent({
+      model: "gemini-2.5-flash",
+      contents: message,
+      config: {
+        systemInstruction: SYSTEM_INSTRUCTION,
         temperature: 0.1,
         maxOutputTokens: 250,
       },
     });
 
-    const response = await result.response;
-    const text = response.text();
+    const text = response.text;
+
+    if (!text) {
+      console.error("Gemini returned empty text. Full response:", JSON.stringify(response));
+      return res.status(500).json({ error: "Gemini returned an empty response." });
+    }
 
     return res.status(200).json({ reply: text });
   } catch (error) {
-    console.error("Gemini API Error:", error);
-    return res.status(500).json({ error: "Failed to generate reply from Gemini API" });
+    console.error("Gemini API Error:", error.message || error);
+    const detail = error.message || "Unknown error";
+    return res.status(500).json({ error: `Failed to generate reply: ${detail}` });
   }
 });
 

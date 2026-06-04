@@ -563,15 +563,12 @@ function initChatbot() {
     const loader = appendTypingIndicator();
 
     try {
-      let responseText = null;
+      // Always try the backend AI first (even for quick-reply chips)
+      let responseText = await askGemini(forceQuery || userText);
 
-      // Only call Gemini if this is not a pre-defined quick query click (which bypasses LLM latency)
-      if (!forceQuery) {
-        responseText = await askGemini(userText);
-      }
-
-      // If Gemini is not configured, or if it failed/bypassed, use local intent parsing
+      // If the backend is unreachable or returned an error, fall back to local rule-based parsing
       if (!responseText) {
+        console.warn("Backend unavailable — using local fallback.");
         responseText = parseIntent(forceQuery || userText);
       }
 
@@ -583,7 +580,9 @@ function initChatbot() {
     } catch (e) {
       console.error("Error handling user message:", e);
       loader.remove();
-      appendMessage("bot", "I’m not sure based on the CV information.");
+      // Ultimate fallback: try local parsing, or show generic error
+      const fallback = parseIntent(forceQuery || userText);
+      appendMessage("bot", fallback);
     }
   }
 
