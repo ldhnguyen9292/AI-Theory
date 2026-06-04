@@ -1,7 +1,7 @@
 /* ==========================================================================
    CONFIGURATION
    ========================================================================== */
-// Replace this with your Render backend URL once deployed (e.g. "https://my-cv-bot.onrender.com")
+// Replace this with your Render backend URL once deployed (e.g. "https://ai-theory.onrender.com")
 const BACKEND_URL = "https://ai-theory.onrender.com";
 
 /* ==========================================================================
