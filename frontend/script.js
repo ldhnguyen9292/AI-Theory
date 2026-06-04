@@ -2,7 +2,7 @@
    CONFIGURATION
    ========================================================================== */
 // Replace this with your Render backend URL once deployed (e.g. "https://my-cv-bot.onrender.com")
-const BACKEND_URL = "http://localhost:3000"; 
+const BACKEND_URL = "https://ai-theory.onrender.com";
 
 /* ==========================================================================
    CV DATASOURCE (JSON OBJECT REPRESENTATION)
@@ -537,9 +537,9 @@ function initChatbot() {
       const response = await fetch(`${BACKEND_URL}/api/chat`, {
         method: "POST",
         headers: {
-          "Content-Type": "application/json"
+          "Content-Type": "application/json",
         },
-        body: JSON.stringify({ message: userInput })
+        body: JSON.stringify({ message: userInput }),
       });
 
       if (!response.ok) {
@@ -580,7 +580,6 @@ function initChatbot() {
         loader.remove();
         appendMessage("bot", responseText);
       }, 500);
-
     } catch (e) {
       console.error("Error handling user message:", e);
       loader.remove();
